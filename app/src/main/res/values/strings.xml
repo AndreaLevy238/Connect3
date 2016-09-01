@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Connect 3</string>
+    <string name="piece_on_the_board">piece on the board</string>
+    <string name="redWin">Congratulations! Red has won!</string>
+    <string name="yellowWin">Congratulations! Yellow has won!</string>
+    <string name="drawGame">The game ended in a draw!</string>
+
+</resources>

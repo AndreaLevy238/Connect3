@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/board"
+        android:id="@+id/board"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/topLeft"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="10dp"
+            android:onClick="dropIn"
+            android:contentDescription="@string/piece_on_the_board"
+            android:tag="0"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/topCenter"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:onClick="dropIn"
+            android:contentDescription="@string/piece_on_the_board"
+            android:tag="1"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/topRight"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="25dp"
+            android:onClick="dropIn"
+            android:contentDescription="@string/piece_on_the_board"
+            android:tag = "2"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/midLeft"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="10dp"
+            android:layout_marginTop="25dp"
+            android:onClick="dropIn"
+            android:contentDescription="@string/piece_on_the_board"
+            android:tag="3"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/center"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:onClick="dropIn"
+            android:contentDescription="@string/piece_on_the_board"
+            android:tag="4"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/midRight"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_margin="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="25dp"
+            android:onClick="dropIn"
+            android:contentDescription="@string/piece_on_the_board"
+            android:tag="5"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/bottomLeft"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_margin="10dp"
+            android:layout_marginTop="25dp"
+            android:onClick="dropIn"
+            android:contentDescription="@string/piece_on_the_board"
+            android:tag="6"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/bottomCenter"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:onClick="dropIn"
+            android:contentDescription="@string/piece_on_the_board"
+            android:tag="7"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/bottomRight"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:onClick="dropIn"
+            android:contentDescription="@string/piece_on_the_board"
+            android:tag="8"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#a2d50000"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/winner"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/congrats"
+            android:textSize="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:typeface="normal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Again!"
+            android:id="@+id/playAgain"
+            android:layout_gravity="center_horizontal"
+            android:background="#c7b71c1c"
+            android:onClick="playAgain" />
+
+    </LinearLayout>
+
+</RelativeLayout>
